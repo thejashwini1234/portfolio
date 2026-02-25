@@ -65,30 +65,42 @@ nav a:hover{
 
 @media(max-width:900px){
 
-    #navbar  {
-        position: absolute;
+    nav {
+        position: fixed;
         top: 70px;
-        right: 0;
+        right: -100%;
         background: #0F172A;
         width: 100%;
-        display: none;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease;
+        display:flex;
+        
+}
+    
+
+    nav a{
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    nav.active{
+        right: 0;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .hero{
         flex-direction: column;
         text-align: center;
-        padding: 20px 0;
-        border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    nav a {
-        margin: 15px 0;
-        display: block;
-    }
-
-    nav.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
+    .gallery-container{
+        justify-content: center;
     }
 }
 
