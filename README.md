@@ -17,7 +17,7 @@ Location: Mysore, Karnataka
 
 ## 🚀 Live Website
 
-🔗 https://thejashwini1234.github.io/portfolio/
+🔗 https://699ea99d958c4edcaf3a38c4--shimmering-pegasus-a877a7.netlify.app/
 
 ---
 
