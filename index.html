@@ -55,6 +55,43 @@ nav a:hover{
     color:#3B82F6;
 }
 
+/* MOBILE NAVBAR */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media(max-width:900px){
+
+    nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #0F172A;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav a {
+        margin: 15px 0;
+        display: block;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
 /* SECTIONS */
 section{
     padding:120px 8%;
@@ -350,11 +387,14 @@ section{
 
 <header>
 <h2>Thejashwini M A</h2>
-<nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fa-solid fa-bars"></i>
+</div>
+
+<nav id="navbar">
 <a href="#about">About</a>
 <a href="#education">Education</a>
-
-
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#internships">Internships</a>
@@ -362,7 +402,6 @@ section{
 <a href="#certifications">Certificates</a>
 <a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
-
 </nav>
 </header>
 
@@ -726,8 +765,8 @@ OOP concepts, data structures, and practical programming applications.
 <section id="resume">
 <h2 class="section-title">Resume</h2>
 <div class="resume-container">
-<iframe src="Thejashwini_M_A_resume.pdf"></iframe>
-<a href="Thejashwini_M_A_resume.pdf" download class="download-btn">
+<iframe src="Thejashwini_M_A_Resume.pdf"></iframe>
+<a href="Thejashwini_M_A_Resume.pdf" download class="download-btn">
 <i class="fa-solid fa-download"></i> Download Resume
 </a>
 </div>
@@ -778,6 +817,12 @@ function toggleGallery(id) {
         gallery.style.display = "flex";
     }
 }
+
+
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+}
+
 
 function openLightbox(src) {
     document.getElementById("lightbox").style.display = "block";
