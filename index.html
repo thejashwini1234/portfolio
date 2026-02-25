@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thejashwini M A | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* BODY */
+body{
+    background:#0F172A;
+    color:#FFFFFF;
+    line-height:1.7;
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0F172A;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    z-index:1000;
+}
+
+header h2{
+    font-weight:800;
+    color:#FFFFFF;
+}
+
+nav a{
+    text-decoration:none;
+    margin-left:25px;
+    color:#64748B;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#3B82F6;
+}
+
+/* SECTIONS */
+section{
+    padding:120px 8%;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:35px;
+    font-weight:700;
+    color:#3B82F6;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.hero-text h1{
+    font-size:52px;
+    font-weight:800;
+    color:#FFFFFF;
+}
+
+.hero-text h3{
+    color:#3B82F6;
+    margin:15px 0;
+}
+
+.hero-text p{
+    margin:20px 0;
+    max-width:600px;
+    color:#64748B;
+}
+
+.hero-img img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #3B82F6;
+    box-shadow:0 10px 30px rgba(59,130,246,0.2);
+}
+
+/* SOCIAL */
+.social-links a{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-right:20px;
+    text-decoration:none;
+    font-weight:500;
+    color:#3B82F6;
+    transition:0.3s;
+}
+
+.social-links a:hover{
+    color:#2563EB;
+}
+
+/* ========================= */
+/* PREMIUM CARDS */
+/* ========================= */
+
+.card{
+    background:#FFFFFF;
+    color:#0F172A;
+    padding:28px;
+    border-radius:16px;
+    border:1px solid rgba(15,23,42,0.06);
+    box-shadow:
+        0 4px 12px rgba(15,23,42,0.05),
+        0 8px 24px rgba(15,23,42,0.06);
+    margin-bottom:28px;
+    transition:all 0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+        0 10px 25px rgba(15,23,42,0.08),
+        0 20px 45px rgba(15,23,42,0.10);
+}
+
+/* PROJECT BUTTON */
+.project-btn{
+    display:inline-block;
+    padding:10px 22px;
+    background:#3B82F6;
+    color:#FFFFFF;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:15px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.project-btn:hover{
+    background:#2563EB;
+}
+
+/* BADGES */
+.badge{
+    display:inline-block;
+    background:rgba(59,130,246,0.1);
+    color:#3B82F6;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    margin:6px 6px 0 0;
+}
+
+/* SKILLS */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-box{
+    background:#FFFFFF;
+    color:#0F172A;
+    padding:22px;
+    border-radius:14px;
+    border:1px solid rgba(15,23,42,0.06);
+    box-shadow:
+        0 4px 12px rgba(15,23,42,0.05),
+        0 8px 24px rgba(15,23,42,0.06);
+    transition:all 0.3s ease;
+}
+
+.skill-box:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 28px rgba(15,23,42,0.10);
+}
+
+/* CERTIFICATES */
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.certificate-card{
+    background:#FFFFFF;
+    color:#0F172A;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid rgba(15,23,42,0.06);
+    box-shadow:
+        0 4px 12px rgba(15,23,42,0.05),
+        0 8px 24px rgba(15,23,42,0.06);
+    transition:all 0.3s ease;
+}
+
+.certificate-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 28px rgba(15,23,42,0.10);
+}
+
+.certificate-card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:12px;
+}
+
+/* RESUME */
+.resume-container{
+    background:#FFFFFF;
+    color:#0F172A;
+    padding:25px;
+    border-radius:14px;
+    border:1px solid rgba(15,23,42,0.06);
+    box-shadow:
+        0 4px 12px rgba(15,23,42,0.05),
+        0 8px 24px rgba(15,23,42,0.06);
+}
+
+.resume-container iframe{
+    width:100%;
+    height:600px;
+    border:none;
+    border-radius:10px;
+}
+
+/* DOWNLOAD BUTTON */
+.download-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 26px;
+    background:#3B82F6;
+    color:#FFFFFF;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.download-btn:hover{
+    background:#2563EB;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+/* ========================= */
+/* BUTTON GALLERY STYLE */
+/* ========================= */
+
+.gallery-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    color: #3B82F6;
+    border: 2px solid #3B82F6;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.gallery-btn:hover {
+    background: #3B82F6;
+    color: white;
+}
+
+.gallery-container {
+    display: none;
+    margin-top: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-container.active {
+    display: flex;
+}
+
+.gallery-container img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba(15,23,42,0.1);
+}
+
+/* ========================= */
+/* LIGHTBOX FULL SCREEN */
+/* ========================= */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<header>
+<h2>Thejashwini M A</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+
+
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#internships">Internships</a>
+<a href="#achievements">Achievements</a>
+<a href="#certifications">Certificates</a>
+<a href="#resume">Resume</a>
+<a href="#contact">Contact</a>
+
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-text">
+<h1>Thejashwini M A</h1>
+<h3>Aspiring Data & AI Professional</h3>
+<p>Building intelligent systems using SQL, Power BI, Machine Learning, and Generative AI.</p>
+
+
+<div class="social-links">
+<a href="https://github.com/thejashwini1234" target="_blank">
+<i class="fab fa-github"></i> GitHub
+</a>
+
+<a href="https://www.linkedin.com/in/thejashwini-m-a-019724306" target="_blank">
+<i class="fab fa-linkedin"></i> LinkedIn
+</a>
+
+<a href="mailto:thejashwinima70@gmail.com">
+<i class="fa-solid fa-envelope"></i> Email
+</a>
+
+<a href="tel:9110287846">
+<i class="fa-solid fa-phone"></i> Phone
+</a>
+</div>
+</div>
+
+<div class="hero-img">
+<img src="profile.png" alt="Profile Photo">
+</div>
+</section>
+
+<!-- ABOUT -->
+<!-- ABOUT -->
+<section id="about">
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+I am a final-year (8th Semester) Bachelor of Engineering student in 
+<strong>Information Science & Engineering</strong> at 
+<strong>Maharaja Institute of Technology, Mysore</strong>, 
+with a strong academic record of <strong>8.85 CGPA</strong>.
+</p>
+
+<p>
+I am passionate about Artificial Intelligence, Data Science, Machine Learning, 
+and building intelligent software systems that solve real-world problems. 
+My core interests include OCR, NLP, and intelligent automation systems.
+</p>
+
+
+<p>
+I am actively seeking opportunities in IT and AI-driven roles where I can 
+contribute technically, learn continuously, and grow as a software professional.
+</p>
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+<h3>B.E. – Information Science & Engineering</h3>
+<p>Maharaja Institute of Technology, Mysore</p>
+<p>2022 – 2026 | CGPA: 8.85</p>
+</div>
+
+<div class="card">
+<h3>Pre-University – SDM PU College</h3>
+<p>2020 – 2022 | Percentage: 91.5%</p>
+</div>
+
+<div class="card">
+<h3>SSLC – St. Johns High School</h3>
+<p>2020 | Percentage: 93%</p>
+</div>
+
+</section>
+
+<!--Projects--> 
+
+<section id="projects">
+<h2 class="section-title">Projects</h2>
+
+<!-- ===================== -->
+<!-- Project 1: OCR + NLP -->
+<!-- ===================== -->
+<div class="card">
+<h3>OCR Text Recognition & NLP Correction System</h3>
+
+<p>
+Designed and implemented an OCR–NLP system for digitizing textual data 
+from images. Integrated text extraction and automated grammar correction 
+within a Flask web application, enabling users to upload images and 
+download refined digital text outputs efficiently.
+</p>
+
+<span class="badge">OCR</span>
+<span class="badge">NLP</span>
+<span class="badge">Flask</span>
+<span class="badge">Python</span>
+
+<br>
+
+<a href="https://github.com/thejashwini1234/ocr-and-nlp-piepline" target="_blank" class="project-btn">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+
+<br>
+
+<button class="gallery-btn" onclick="toggleGallery('ocrGallery')">
+View Gallery
+</button>
+
+<div class="gallery-container" id="ocrGallery">
+    <img src="ocr1.png" onclick="openLightbox(this.src)">
+    <img src="ocr2.png" onclick="openLightbox(this.src)">
+    <img src="ocr3.png" onclick="openLightbox(this.src)">
+    <img src="ocr4.png" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- Project 2: Health Diagnosis -->
+<!-- ===================== -->
+<div class="card">
+<h3>Health Diagnosis & Recommendation System</h3>
+
+<p>
+Developed a predictive health diagnosis system using supervised 
+machine learning techniques. Processed structured symptom data, 
+trained classification models, and deployed the solution through 
+a Flask web application to provide real-time disease predictions 
+and recommendations.
+</p>
+
+<span class="badge">Python</span>
+<span class="badge">Flask</span>
+<span class="badge">Machine Learning</span>
+<span class="badge">Scikit-learn</span>
+
+<br>
+
+<a href="https://github.com/thejashwini1234/health-diagnosis-recommendation-system" target="_blank" class="project-btn">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+
+<br>
+
+<button class="gallery-btn" onclick="toggleGallery('healthGallery')">
+View Gallery
+</button>
+
+<div class="gallery-container" id="healthGallery">
+    <img src="health1.png" onclick="openLightbox(this.src)">
+    <img src="health2.png" onclick="openLightbox(this.src)">
+    <img src="health3.png" onclick="openLightbox(this.src)">
+    
+</div>
+
+</div>
+
+<!-- ===================== -->
+<!-- Project 3: Customer Churn -->
+<!-- ===================== -->
+<div class="card">
+<h3>Customer Churn Analysis Dashboard</h3>
+
+<p>
+Analyzed customer churn dataset using SQL for data extraction 
+and aggregation, Excel for preprocessing and transformation, 
+and Power BI for building interactive dashboards. Identified 
+churn rate trends, high-risk customer segments, and revenue 
+impact through data-driven insights.
+</p>
+
+<span class="badge">SQL</span>
+<span class="badge">Excel</span>
+<span class="badge">Power BI</span>
+<span class="badge">Data Analysis</span>
+
+<br>
+
+<a href="YOUR_GITHUB_LINK_HERE" target="_blank" class="project-btn">
+<i class="fab fa-github"></i> View on GitHub
+</a>
+
+<br>
+
+<button class="gallery-btn" onclick="toggleGallery('churnGallery')">
+View Gallery
+</button>
+
+<div class="gallery-container" id="churnGallery">
+    <img src="churn1.png" onclick="openLightbox(this.src)">
+    <img src="churn2.png" onclick="openLightbox(this.src)">
+    <img src="churn3.png" onclick="openLightbox(this.src)">
+    <img src="churn4.png" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+
+</section>
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Technical Skills</h2>
+<div class="skills-grid">
+
+<div class="skill-box">
+<strong>Data Analytics:</strong> SQL (MySQL), Excel, Power BI
+</div>
+
+<div class="skill-box">
+<strong>Programming:</strong> Python, C
+</div>
+
+<div class="skill-box">
+<strong>Python Libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+</div>
+
+<div class="skill-box">
+<strong>AI / ML:</strong> Machine Learning, OCR, NLP, Generative AI
+</div>
+
+<div class="skill-box">
+<strong>Web Development:</strong> HTML, CSS, Flask
+</div>
+
+<div class="skill-box">
+<strong>Development Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook , Antigravity
+</div>
+
+<div class="skill-box">
+<strong>Soft Skills:</strong> Leadership, Problem-Solving, Communication, Team Collaboration
+</div>
+
+
+</div>
+</section>
+
+
+<!-- INTERNSHIPS -->
+<section id="internships">
+<h2 class="section-title">Internships</h2>
+
+<div class="card">
+<h3>Data Science Intern – Take It Smart (OPC) Pvt Ltd  ( Present )</h3>
+<p>
+Gained hands-on experience in data preprocessing and machine learning workflows.
+</p>
+<ul>
+<li>Performed data cleaning using Pandas.</li>
+<li>Conducted exploratory data analysis.</li>
+<li>Implemented basic ML models.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Python Programming Intern – InternPe</h3>
+<p>
+Completed internship focused on Python fundamentals, scripting, and structured programming concepts.
+</p>
+<ul>
+<li>Worked on problem-solving exercises.</li>
+<li>Strengthened understanding of OOP concepts.</li>
+<li>Improved logical thinking and coding practices.</li>
+</ul>
+</div>
+
+
+
+</section>
+
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+<h2 class="section-title">Achievements</h2>
+
+<div class="card">
+<h3>Paper Presentation – ICOATES 2025</h3>
+<p>
+Presented the research paper titled <strong>“A Review on Post-OCR Processing Systems”</strong> 
+focusing on improving OCR accuracy using NLP-based post-processing techniques.
+</p>
+<p>
+Explained system architecture, evaluation methods, and practical applications 
+to a technical academic audience.
+</p>
+</div>
+
+<div class="card">
+<h3>Best Paper Award – ICaSmart 2025</h3>
+<p>
+Received the Best Paper Award for proposing an efficient OCR–NLP framework 
+for intelligent document digitization.
+</p>
+<p>
+Recognized for technical clarity, innovation, and practical implementation approach.
+</p>
+</div>
+
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+<h2 class="section-title">Certifications & Participation</h2>
+
+<div class="certificate-grid">
+
+<!-- Certificate 1 -->
+<div class="certificate-card">
+<img src="cert1.jpeg" alt="AI Tools Workshop Certificate">
+
+<h4>AI Tools & ChatGPT Workshop – be10x (2024)</h4>
+
+<p>
+Completed AI Tools Workshop focused on AI productivity tools, 
+presentation automation, data analysis, and debugging techniques.
+</p>
+</div>
+
+
+<!-- Certificate 2 -->
+<div class="certificate-card">
+<img src="cert2.png" alt="Innoviet Hackathon Certificate">
+
+<h4>Innoviet 2025 Hackathon – VVIT Mysuru</h4>
+
+<p>
+Participated in Innoviet 2025 Hackathon organized by the 
+Department of Information Science & Engineering.
+</p>
+</div>
+
+
+<!-- Certificate 3 -->
+<div class="certificate-card">
+<img src="cert3.png" alt="Simplilearn Python Certificate">
+
+<h4>Python Programming Certification – Simplilearn (2024)</h4>
+
+<p>
+Completed professional certification covering Python fundamentals, 
+OOP concepts, data structures, and practical programming applications.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESUME -->
+<section id="resume">
+<h2 class="section-title">Resume</h2>
+<div class="resume-container">
+<iframe src="Thejashwini_M_A_Resume.pdf"></iframe>
+<a href="Thejashwini_M_A_Resume.pdf" download class="download-btn">
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="section-title">Contact</h2>
+<div class="card">
+<p><i class="fa-solid fa-envelope"></i> thejashwinima70@gmail.com</p>
+<p><i class="fa-solid fa-phone"></i> 9110287846</p>
+<p><i class="fab fa-linkedin"></i> LinkedIn</p>
+<p><i class="fab fa-github"></i> GitHub</p>
+</div>
+</section>
+
+
+
+<script>
+function toggleGallery(id) {
+    const gallery = document.getElementById(id);
+
+    if (gallery.style.display === "flex") {
+        gallery.style.display = "none";
+    } else {
+        gallery.style.display = "flex";
+    }
+}
+
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+</div>
+</body>
+</html>
