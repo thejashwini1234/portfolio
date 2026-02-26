@@ -835,22 +835,15 @@ GitHub
 
 
 <script>
-function toggleGallery(id) {
-    const gallery = document.getElementById(id);
 
-    if (gallery.style.display === "flex") {
-        gallery.style.display = "none";
-    } else {
-        gallery.style.display = "flex";
-    }
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
 }
-
 
 function toggleGallery(id) {
     const gallery = document.getElementById(id);
     gallery.classList.toggle("active");
 }
-
 
 function openLightbox(src) {
     document.getElementById("lightbox").style.display = "block";
@@ -861,7 +854,6 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 
-
 // Close mobile menu when clicking nav link
 document.querySelectorAll("#navbar a").forEach(link => {
     link.addEventListener("click", function () {
@@ -870,7 +862,6 @@ document.querySelectorAll("#navbar a").forEach(link => {
 });
 
 </script>
-
 <div id="lightbox" class="lightbox">
     <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
     <img class="lightbox-content" id="lightbox-img">
