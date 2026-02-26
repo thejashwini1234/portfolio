@@ -846,8 +846,9 @@ function toggleGallery(id) {
 }
 
 
-function toggleMenu(){
-    document.getElementById("navbar").classList.toggle("active");
+function toggleGallery(id) {
+    const gallery = document.getElementById(id);
+    gallery.classList.toggle("active");
 }
 
 
@@ -859,6 +860,15 @@ function openLightbox(src) {
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
+
+
+// Close mobile menu when clicking nav link
+document.querySelectorAll("#navbar a").forEach(link => {
+    link.addEventListener("click", function () {
+        document.getElementById("navbar").classList.remove("active");
+    });
+});
+
 </script>
 
 <div id="lightbox" class="lightbox">
