@@ -281,29 +281,11 @@ section{
     margin-bottom:12px;
 }
 
-/* RESUME */
-.resume-container{
-    background:#FFFFFF;
-    color:#0F172A;
-    padding:25px;
-    border-radius:14px;
-    border:1px solid rgba(15,23,42,0.06);
-    box-shadow:
-        0 4px 12px rgba(15,23,42,0.05),
-        0 8px 24px rgba(15,23,42,0.06);
-}
+/* DOWNLOAD RESUME BUTTON */
 
-.resume-container iframe{
-    width:100%;
-    height:600px;
-    border:none;
-    border-radius:10px;
-}
-
-/* DOWNLOAD BUTTON */
 .download-btn{
     display:inline-block;
-    margin-top:20px;
+    margin-top:25px;
     padding:12px 26px;
     background:#3B82F6;
     color:#FFFFFF;
@@ -312,11 +294,6 @@ section{
     font-weight:600;
     transition:0.3s;
 }
-
-.download-btn:hover{
-    background:#2563EB;
-}
-
 /* RESPONSIVE */
 @media(max-width:900px){
     .hero{
@@ -416,26 +393,32 @@ section{
 
 <nav id="navbar">
 <a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
+
+<a href="#projects">Projects</a>
+
 <a href="#internships">Internships</a>
 <a href="#achievements">Achievements</a>
+<a href="#education">Education</a>
 <a href="#certifications">Certificates</a>
-<a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
+
 <div class="hero-text">
+
 <h1>Thejashwini M A</h1>
 <h3>Aspiring Data & AI Professional</h3>
-<p>Building intelligent systems using SQL, Power BI, Machine Learning, and Generative AI.</p>
 
+<p>
+Building intelligent systems using SQL, Power BI, Machine Learning, and Generative AI.
+</p>
 
 <div class="social-links">
+
 <a href="https://github.com/thejashwini1234" target="_blank">
 <i class="fab fa-github"></i> GitHub
 </a>
@@ -451,15 +434,24 @@ section{
 <a href="tel:9110287846">
 <i class="fa-solid fa-phone"></i> Phone
 </a>
+
 </div>
+
+<a href="Thejashwini_M_A_resume.pdf" download class="download-btn">
+<i class="fa-solid fa-download"></i> Download Resume
+</a>
+
 </div>
 
 <div class="hero-img">
 <img src="profile.png" alt="Profile Photo">
 </div>
+
 </section>
 
-<!-- ABOUT -->
+
+
+
 <!-- ABOUT -->
 <section id="about">
 <h2 class="section-title">About Me</h2>
@@ -487,27 +479,44 @@ contribute technically, learn continuously, and grow as a software professional.
 
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-<h2 class="section-title">Education</h2>
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Technical Skills</h2>
+<div class="skills-grid">
 
-<div class="card">
-<h3>B.E. – Information Science & Engineering</h3>
-<p>Maharaja Institute of Technology, Mysore</p>
-<p>2022 – 2026 | CGPA: 8.85</p>
+<div class="skill-box">
+<strong>Data Analytics:</strong> SQL (MySQL), Excel, Power BI
 </div>
 
-<div class="card">
-<h3>Pre-University – SDM PU College</h3>
-<p>2020 – 2022 | Percentage: 91.5%</p>
+<div class="skill-box">
+<strong>Programming:</strong> Python, C
 </div>
 
-<div class="card">
-<h3>SSLC – St. Johns High School</h3>
-<p>2020 | Percentage: 93%</p>
+<div class="skill-box">
+<strong>Python Libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 </div>
 
+<div class="skill-box">
+<strong>AI / ML:</strong> Machine Learning, OCR, NLP, Generative AI
+</div>
+
+<div class="skill-box">
+<strong>Web Development:</strong> HTML, CSS, Flask
+</div>
+
+<div class="skill-box">
+<strong>Development Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook , Antigravity
+</div>
+
+<div class="skill-box">
+<strong>Soft Skills:</strong> Leadership, Problem-Solving, Communication, Team Collaboration
+</div>
+
+
+</div>
 </section>
+
+
 
 <!--Projects--> 
 
@@ -634,42 +643,9 @@ View Gallery
 </div>
 
 </section>
-<!-- SKILLS -->
-<section id="skills">
-<h2 class="section-title">Technical Skills</h2>
-<div class="skills-grid">
-
-<div class="skill-box">
-<strong>Data Analytics:</strong> SQL (MySQL), Excel, Power BI
-</div>
-
-<div class="skill-box">
-<strong>Programming:</strong> Python, C
-</div>
-
-<div class="skill-box">
-<strong>Python Libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
-</div>
-
-<div class="skill-box">
-<strong>AI / ML:</strong> Machine Learning, OCR, NLP, Generative AI
-</div>
-
-<div class="skill-box">
-<strong>Web Development:</strong> HTML, CSS, Flask
-</div>
-
-<div class="skill-box">
-<strong>Development Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook , Antigravity
-</div>
-
-<div class="skill-box">
-<strong>Soft Skills:</strong> Leadership, Problem-Solving, Communication, Team Collaboration
-</div>
 
 
-</div>
-</section>
+
 
 
 <!-- INTERNSHIPS -->
@@ -734,6 +710,28 @@ Recognized for technical clarity, innovation, and practical implementation appro
 </section>
 
 
+<!-- EDUCATION -->
+<section id="education">
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+<h3>B.E. – Information Science & Engineering</h3>
+<p>Maharaja Institute of Technology, Mysore</p>
+<p>2022 – 2026 | CGPA: 8.85</p>
+</div>
+
+<div class="card">
+<h3>Pre-University – SDM PU College</h3>
+<p>2020 – 2022 | Percentage: 91.5%</p>
+</div>
+
+<div class="card">
+<h3>SSLC – St. Johns High School</h3>
+<p>2020 | Percentage: 93%</p>
+</div>
+
+</section>
+
 <!-- CERTIFICATIONS -->
 <section id="certifications">
 <h2 class="section-title">Certifications & Participation</h2>
@@ -777,22 +775,46 @@ Completed professional certification covering Python fundamentals,
 OOP concepts, data structures, and practical programming applications.
 </p>
 </div>
+<!-- Certificate 4 -->
+<div class="certificate-card">
+<img src="cert4.jpeg" alt="ICOATES 2025 – International Conference">
 
+<h4>ICOATES 2025 – International Conference</h4>
+
+<p>
+Presented a research paper titled “A Review on Post-OCR Processing Systems” at the International Conference on Adaptive Technologies in Engineering and Sciences (ICOATES 2025).
+
+</p>
+</div>
+
+<!-- Certificate 5 -->
+<div class="certificate-card">
+<img src="cert5.jpeg" alt="IC-AISMART 2025 – Research Paper Presentation">
+
+<h4>IC-AISMART 2025 – Research Paper Presentation</h4>
+
+<p>
+Presented a research paper titled “An Integrated OCR–NLP Framework for Printed and Handwritten Text Recognition” at the AICTE-sponsored International Conference IC-AISMART 2025.
+
+</p>
+</div>
+<!-- Certificate 6 -->
+<div class="certificate-card">
+<img src="cert6.jpeg" alt="IC-AISMART 2025 – Best Paper Award">
+
+<h4>IC-AISMART 2025 – Best Paper Award</h4>
+
+<p>
+Received the Best Paper Award at the AICTE-sponsored International Conference IC-AISMART 2025 for the research on an Integrated OCR–NLP Framework.
+
+</p>
+</div>
 </div>
 
 </section>
 
 
-<!-- RESUME -->
-<section id="resume">
-<h2 class="section-title">Resume</h2>
-<div class="resume-container">
-<iframe src="Thejashwini_M_A_resume.pdf"></iframe>
-<a href="Thejashwini_M_A_resume.pdf" download class="download-btn">
-<i class="fa-solid fa-download"></i> Download Resume
-</a>
-</div>
-</section>
+
 
 <!-- CONTACT -->
 <section id="contact">
